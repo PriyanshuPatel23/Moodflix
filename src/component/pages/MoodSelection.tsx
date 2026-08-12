@@ -16,7 +16,7 @@ const MoodSelection = () => {
   };
 
   return (
-    <div className="relative min-h-screen flex flex-col items-center justify-center p-8 bg-linear-to-b from-bg-dark to-bg-gradient-end">
+    <div className="relative min-h-screen overflow-hidden flex flex-col items-center justify-center p-8 pb-28 md:pb-8 bg-linear-to-b from-bg-dark to-bg-gradient-end">
       <div className="text-center mb-10 max-w-2xl">
         <p className="text-display-lg text-text-primary/70 tracking-wide font-semibold">
           What&apos;s your vibe Today?

@@ -4,7 +4,7 @@ const MoodChip = ({ emoji, id, isActive, onClick, title, description }: moodchip
   return (
     <div
       onClick={() => onClick(id)}
-      className={`glass-card flex flex-col justify-between p-6 rounded-2xl cursor-pointer w-full max-w-[280px] h-48 select-none transition-all duration-300 ${
+      className={`glass-card flex flex-col justify-between p-6 rounded-2xl cursor-pointer w-full max-w-70 h-48 select-none transition-all duration-300 ${
         isActive
           ? 'border-primary bg-surface-bright/40 shadow-[0_0_24px_rgba(255,107,74,0.15)] scale-[1.02]'
           : 'border-white/5 hover:border-primary/30'
