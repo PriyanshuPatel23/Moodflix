@@ -1,15 +1,18 @@
 import { Search } from 'lucide-react';
 
-const SearchBar = () => {
+interface SearchBarProps {
+  onOpen: () => void;
+}
+
+const SearchBar = ({ onOpen }: SearchBarProps) => {
   return (
-    <div className="flex items-center gap-2 bg-surface-container/60 border border-outline-glass rounded-full px-4 py-2 w-64">
+    <button
+      onClick={onOpen}
+      className="flex items-center gap-2 bg-surface-container/60 border border-outline-glass rounded-full px-4 py-2 w-64 text-left"
+    >
       <Search size={16} className="text-text-primary/50" />
-      <input
-        type="text"
-        placeholder="Search titles, moods..."
-        className="bg-transparent outline-none text-body-sm text-text-primary placeholder:text-text-primary/40 w-full"
-      />
-    </div>
+      <span className="text-body-sm text-text-primary/40">Search titles, moods...</span>
+    </button>
   );
 };
 

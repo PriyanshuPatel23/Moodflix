@@ -153,3 +153,39 @@ h6 {
   font-size: clamp(0.675rem, 0.1vw + 0.65rem, 0.75rem);
   line-height: 1.6;
 }
+
+/* Custom site-wide scrollbars: thin, rounded, and matching the brand tint */
+/* Works in WebKit/Blink (Chrome, Safari, Edge) and respects Firefox with scrollbar-color */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 107, 74, 0.55) rgba(255, 255, 255, 0.03);
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 9999px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, rgba(255, 107, 74, 0.65), rgba(255, 107, 74, 0.45));
+  border-radius: 9999px;
+  border: 2px solid rgba(0, 0, 0, 0.12);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, rgba(255, 107, 74, 0.85), rgba(255, 107, 74, 0.6));
+}
+
+*::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* Slightly different track for glass panels to feel integrated */
+.glass-panel *::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.01);
+}
